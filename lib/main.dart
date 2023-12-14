@@ -1,4 +1,5 @@
 import 'package:awakened_flutter/screens/login/login_screen.dart';
+import 'package:awakened_flutter/screens/stopwatch/stop_watch_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,13 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.purple,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [LoginScreen()],
-        ),
-      ),
+      home: StopWatch()
     );
   }
 }
