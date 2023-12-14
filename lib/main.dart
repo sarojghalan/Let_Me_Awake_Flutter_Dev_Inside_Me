@@ -1,5 +1,5 @@
-import 'package:awakened_flutter/screens/login/login_screen.dart';
-import 'package:awakened_flutter/screens/stopwatch/stop_watch_screen.dart';
+
+import 'package:awakened_flutter/views/screens/stopwatch/stop_watch_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
