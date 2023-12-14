@@ -1,4 +1,5 @@
-import 'package:awakened_flutter/screens/login/feature/login_form.dart';
+
+import 'package:awakened_flutter/views/screens/login/feature/login_form.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
