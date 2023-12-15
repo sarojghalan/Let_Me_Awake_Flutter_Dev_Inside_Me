@@ -1,4 +1,5 @@
 
+import 'package:awakened_flutter/views/screens/input-form/input_form.dart';
 import 'package:awakened_flutter/views/screens/stopwatch/stop_watch_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StopWatch()
+      home: InputForm()
     );
   }
 }
