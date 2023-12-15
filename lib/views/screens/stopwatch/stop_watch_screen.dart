@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class StopWatch extends StatefulWidget {
-  const StopWatch({super.key});
+  final String name;
+  final String email;
+  const StopWatch({super.key, required this.name, required this.email});
 
   // returning instance of _StopWatchState when created
   @override
@@ -73,9 +75,9 @@ class _StopWatchState extends State<StopWatch> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'Stop Watch',
-            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+          title: Text(
+            widget.name,
+            style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
         ),

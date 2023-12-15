@@ -1,3 +1,4 @@
+import 'package:awakened_flutter/views/screens/stopwatch/stop_watch_screen.dart';
 import 'package:flutter/material.dart';
 
 class InputForm extends StatefulWidget {
@@ -30,8 +31,12 @@ class _InputFormState extends State<InputForm> {
     }
     setState(() {
       loggedIn = true;
-      name = _nameController.text;
+      final name = _nameController.text;
+      final email = _emailController.text;
       isVisible = true;
+
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (_) => StopWatch(name: name, email: email)));
     });
   }
 
@@ -92,7 +97,8 @@ class _InputFormState extends State<InputForm> {
             TextFormField(
               controller: _emailController,
               keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(labelText: 'Email',border: OutlineInputBorder()),
+              decoration: const InputDecoration(
+                  labelText: 'Email', border: OutlineInputBorder()),
               validator: (text) {
                 if (text!.isEmpty) {
                   return 'Enter the runner\'s email';
