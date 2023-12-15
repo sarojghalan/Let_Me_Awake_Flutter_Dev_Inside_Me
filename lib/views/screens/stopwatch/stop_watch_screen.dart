@@ -1,3 +1,4 @@
+import 'package:awakened_flutter/views/widgets/modal/platform_alert.dart';
 import 'package:flutter/material.dart';
 // providing asynchronous utilities like Timer
 import 'dart:async';
@@ -44,6 +45,12 @@ class _StopWatchState extends State<StopWatch> {
     setState(() {
       isTicking = false;
     });
+    final totalRunTime = laps.fold(milliseconds, (total, lap) => total + lap);
+    final alert = PlatFormAlert(
+      title: 'Run Completed!',
+      message: 'Total Run Time is ${_secondsText(totalRunTime)}.',
+    );
+    alert.show(context);
   }
 
   void _lap() {
@@ -77,7 +84,8 @@ class _StopWatchState extends State<StopWatch> {
         appBar: AppBar(
           title: Text(
             widget.name,
-            style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            style:
+                const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
         ),
