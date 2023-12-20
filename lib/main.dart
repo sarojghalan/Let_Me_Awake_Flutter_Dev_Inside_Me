@@ -1,21 +1,21 @@
 
+import 'package:awakened_flutter/views/master-plan/plan_screen.dart';
 import 'package:awakened_flutter/views/screens/input-form/input_form.dart';
 import 'package:awakened_flutter/views/screens/stopwatch/stop_watch_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MasterPlanApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MasterPlanApp extends StatelessWidget {
+  const MasterPlanApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: InputForm()
+    return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.purple),
+      home:const PlanScreen(),
     );
   }
 }
